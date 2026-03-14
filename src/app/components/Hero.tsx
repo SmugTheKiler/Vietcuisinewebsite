@@ -43,7 +43,7 @@ export function Hero() {
             View Menu
           </button>
           <button 
-          onClick={() => window.open('https://www.skiplinow.com/shop/631221g')}
+          onClick={() => scrollToSection('locations')}
             className="bg-white text-[#8B1E1E] px-8 py-4 rounded-lg hover:bg-gray-100 transition-colors w-full sm:w-auto"
             style={{ fontFamily: 'Inter, sans-serif' }}
           >
