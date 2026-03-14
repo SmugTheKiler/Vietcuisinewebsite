@@ -9,6 +9,7 @@ const locations = [
     phone: '(770) 487-2494',
     hours: 'Tue–Sun: 11:30 AM – 9:30 PM',
     closed: 'Closed Monday',
+    booktablelink: 'https://www.skiplinow.com/shop/631221g'
   },
   {
     id: 2,
@@ -18,6 +19,7 @@ const locations = [
     phone: '(678) 857-3425',
     hours: 'Tue–Sun: 11:30 AM – 9:00 PM',
     closed: 'Closed Monday',
+    booktablelink: 'https://www.skiplinow.com/shop/633793q'
   },
 ];
 
@@ -51,13 +53,10 @@ export function Locations() {
                 <iframe
                   className="w-full h-full"
                   loading="lazy"
-                  src={`https://www.google.com/maps/embed/v1/place?key=YOUR_API_KEY&q=${encodeURIComponent(location.address + ', ' + location.city)}`}
+                  src={`https://www.google.com/maps/embed/v1/place?key=AIzaSyDN74ETakE3DjcfY8TfKSmxdHQrUEu6jtw&q=${encodeURIComponent(location.address + ', ' + location.city)}`}
                   style={{ border: 0, filter: 'grayscale(0.3)' }}
                   title={`Map of ${location.name}`}
                 />
-                <div className="absolute inset-0 bg-[#8B1E1E]/10 flex items-center justify-center">
-                  <MapPin className="w-16 h-16 text-[#8B1E1E]" />
-                </div>
               </div>
 
               {/* Location Info */}
@@ -97,13 +96,27 @@ export function Locations() {
                   </div>
                 </div>
 
-                <button 
-                  className="mt-6 w-full bg-[#8B1E1E] text-white px-6 py-3 rounded-lg hover:bg-[#6B1616] transition-colors"
-                  style={{ fontFamily: 'Inter, sans-serif' }}
-                  onClick={() => window.open(`tel:${location.phone.replace(/[^0-9]/g, '')}`)}
-                >
-                  Call Now
-                </button>
+<div className="mt-6 flex w-full gap-3">
+  
+  {/* Small Call Button */}
+  <button
+    className="bg-[#8B1E1E] text-white px-4 py-3 rounded-lg hover:bg-[#6B1616] transition-colors"
+    onClick={() => window.open(`tel:${location.phone.replace(/[^0-9]/g, '')}`)}
+    style={{ fontFamily: "Inter, sans-serif" }}
+  >
+    📞
+  </button>
+
+  {/* Main Button */}
+  <button
+    className="flex-1 bg-[#8B1E1E] text-white px-6 py-3 rounded-lg hover:bg-[#6B1616] transition-colors"
+    onClick={() => window.open(location.booktablelink)}
+    style={{ fontFamily: "Inter, sans-serif" }}
+  >
+    Book a Table
+  </button>
+
+</div>
               </div>
             </div>
           ))}

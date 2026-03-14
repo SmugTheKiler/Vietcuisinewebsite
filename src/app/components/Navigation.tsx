@@ -46,8 +46,8 @@ export function Navigation() {
             </button>
             
             {/* CTA Button */}
-            <button className="bg-[#8B1E1E] text-white px-6 py-3 rounded-lg hover:bg-[#6B1616] transition-colors" style={{ fontFamily: 'Inter, sans-serif' }}>
-              Order Pickup
+            <button onClick={() => scrollToSection('locations')} className="bg-[#8B1E1E] text-white px-6 py-3 rounded-lg hover:bg-[#6B1616] transition-colors" style={{ fontFamily: 'Inter, sans-serif' }}>
+              Book  a Table
             </button>
           </div>
 
@@ -82,8 +82,8 @@ export function Navigation() {
             <button onClick={() => scrollToSection('contact')} className="block w-full text-left py-2 text-[#2B2B2B] hover:text-[#8B1E1E] transition-colors" style={{ fontFamily: 'Inter, sans-serif' }}>
               Contact
             </button>
-            <button className="w-full bg-[#8B1E1E] text-white px-6 py-3 rounded-lg hover:bg-[#6B1616] transition-colors" style={{ fontFamily: 'Inter, sans-serif' }}>
-              Order Pickup
+            <button onClick={() => scrollToSection('locations')} className="w-full bg-[#8B1E1E] text-white px-6 py-3 rounded-lg hover:bg-[#6B1616] transition-colors" style={{ fontFamily: 'Inter, sans-serif' }}>
+              Book  a Table
             </button>
           </div>
         </div>

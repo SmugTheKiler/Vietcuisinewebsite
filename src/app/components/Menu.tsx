@@ -1,29 +1,125 @@
 const menuCategories = [
   {
     id: 1,
-    name: 'Appetizers',
-    items: ['Fresh Spring Rolls', 'Egg Rolls', 'Crispy Wontons', 'Chicken Wings'],
+    name: "Appetizers",
+    items: [
+      "Fresh Spring Rolls (Shrimp)",
+      "BBQ Pork Spring Rolls",
+      "Vietnamese Crispy Egg Rolls",
+      "Coconut Shrimp",
+      "Vietnamese Chicken Wings"
+    ]
   },
   {
     id: 2,
-    name: 'Pho (Noodle Soup)',
-    items: ['Pho with Beef', 'Pho with Chicken', 'Pho with Seafood', 'Vegetarian Pho'],
+    name: "Salads",
+    items: [
+      "Mango Salad",
+      "Papaya Salad (Som Tum)",
+      "Cucumber Salad",
+      "Shrimp & Herb Salad",
+      "Chicken Cabbage Salad"
+    ]
   },
   {
     id: 3,
-    name: 'Vermicelli Bowls',
-    items: ['Grilled Pork Vermicelli', 'Grilled Chicken Vermicelli', 'Spring Roll Vermicelli', 'Combination Vermicelli'],
+    name: "Vegetarian",
+    items: [
+      "Vegetarian Spring Rolls",
+      "Vegetarian Pho (Tofu & Vegetables)",
+      "Vegetarian Vermicelli Bowl",
+      "Vegetarian Rice Plate",
+      "Vegetarian Stir Fry Noodles"
+    ]
   },
   {
     id: 4,
-    name: 'Rice Plates',
-    items: ['Grilled Pork Rice Plate', 'Grilled Chicken Rice Plate', 'Combination Rice Plate', 'Vegetarian Rice Plate'],
+    name: "Pho (Beef Noodle Soup)",
+    items: [
+      "House Special Pho",
+      "Pho with Rare Steak",
+      "Pho with Brisket",
+      "Pho with Meatballs",
+      "Pho with Rare Steak & Brisket"
+    ]
   },
   {
     id: 5,
-    name: 'Drinks',
-    items: ['Vietnamese Iced Coffee', 'Thai Iced Tea', 'Coconut Water', 'Fresh Lemonade'],
+    name: "Chicken Pho",
+    items: [
+      "Classic Chicken Pho",
+      "Chicken Pho with Flat Rice Noodles",
+      "Chicken Pho with Vermicelli",
+      "Chicken Pho with Clear Noodles",
+      "Chicken Pho with Extra Herbs"
+    ]
   },
+  {
+    id: 6,
+    name: "Seafood Noodle Soup",
+    items: [
+      "Seafood Pho",
+      "Shrimp Noodle Soup",
+      "Seafood Egg Noodle Soup",
+      "Seafood Rice Noodle Soup",
+      "House Special Seafood Combo Soup"
+    ]
+  },
+  {
+    id: 7,
+    name: "Vermicelli Bowls",
+    items: [
+      "Grilled Pork Vermicelli",
+      "Grilled Chicken Vermicelli",
+      "BBQ Beef Vermicelli",
+      "Grilled Shrimp Vermicelli",
+      "Combination Vermicelli Bowl"
+    ]
+  },
+  {
+    id: 8,
+    name: "Rice Plates",
+    items: [
+      "Grilled Pork Rice Plate",
+      "Lemongrass Chicken Rice Plate",
+      "BBQ Beef Rice Plate",
+      "Grilled Shrimp Rice Plate",
+      "Combination Rice Plate"
+    ]
+  },
+  {
+    id: 9,
+    name: "Kids Menu",
+    items: [
+      "Kids BBQ Pork Rice",
+      "Kids Lemongrass Chicken Rice",
+      "Kids BBQ Beef Rice",
+      "Kids Chicken Pho",
+      "Kids Meatball Pho"
+    ]
+  },
+  {
+    id: 10,
+    name: "Desserts",
+    items: [
+      "Mango Sticky Rice",
+      "Sweet Sticky Rice",
+      "Fried Banana Dessert",
+      "Coconut Jelly",
+      "Vietnamese Flan"
+    ]
+  },
+  {
+    id: 11,
+    name: "Drinks",
+    items: [
+      "Vietnamese Iced Coffee",
+      "Thai Iced Tea",
+      "Fresh Lemonade",
+      "Coconut Juice",
+      "Mango Smoothie"
+    ]
+  }
 ];
 
 export function Menu() {
@@ -41,7 +137,7 @@ export function Menu() {
             className="text-lg text-[#2B2B2B]/80 max-w-2xl mx-auto"
             style={{ fontFamily: 'Inter, sans-serif' }}
           >
-            A selection of our authentic Vietnamese dishes
+            Top 5 dishes per category of our authentic Vietnamese dishes
           </p>
         </div>
 
@@ -75,6 +171,7 @@ export function Menu() {
 
         <div className="text-center">
           <button 
+          onClick={() => window.open('https://nebula.wsimg.com/fdb297b748cd4ba0fa3e6d8424660539?AccessKeyId=F612F19B47BEF3A4A62F&disposition=0&alloworigin=1')}
             className="bg-[#8B1E1E] text-white px-8 py-4 rounded-lg hover:bg-[#6B1616] transition-colors"
             style={{ fontFamily: 'Inter, sans-serif' }}
           >

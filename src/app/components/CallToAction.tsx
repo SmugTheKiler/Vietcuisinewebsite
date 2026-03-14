@@ -25,16 +25,26 @@ export function CallToAction() {
 
         <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
           <button 
+            onClick={() => {
+              const element = document.getElementById('locations');
+              if (element) {
+                element.scrollIntoView({ behavior: 'smooth' });
+              }
+            }}
             className="bg-white text-[#8B1E1E] px-8 py-4 rounded-lg hover:bg-gray-100 transition-colors w-full sm:w-auto"
             style={{ fontFamily: 'Inter, sans-serif' }}
           >
-            Order Pickup
+            Book a Table
           </button>
           <button 
             className="bg-[#D9A441] text-white px-8 py-4 rounded-lg hover:bg-[#C89431] transition-colors w-full sm:w-auto flex items-center justify-center gap-2"
             style={{ fontFamily: 'Inter, sans-serif' }}
-            onClick={() => window.open('tel:7704872494')}
-          >
+            onClick={() => {
+              const element = document.getElementById('locations');
+              if (element) {
+                element.scrollIntoView({ behavior: 'smooth' });
+              }
+            }}          >
             <Phone size={20} />
             Call Now
           </button>

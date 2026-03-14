@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import { Mail, Phone, MapPin } from 'lucide-react';
-
+const FORMSPREE_URL = 'https://formspree.io/f/xojklkrn';
 export function Contact() {
   const [formData, setFormData] = useState({
     name: '',
@@ -44,95 +44,89 @@ export function Contact() {
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
           {/* Contact Form */}
           <div className="bg-[#FFF8F1] rounded-lg p-8 shadow-md">
-            <form onSubmit={handleSubmit} className="space-y-6">
-              <div>
-                <label 
-                  htmlFor="name" 
-                  className="block text-[#2B2B2B] mb-2"
-                  style={{ fontFamily: 'Inter, sans-serif' }}
-                >
-                  Name
-                </label>
-                <input
-                  type="text"
-                  id="name"
-                  name="name"
-                  value={formData.name}
-                  onChange={handleChange}
-                  required
-                  className="w-full px-4 py-3 rounded-lg border border-[#D9A441]/30 focus:outline-none focus:ring-2 focus:ring-[#8B1E1E] bg-white"
-                  style={{ fontFamily: 'Inter, sans-serif' }}
-                />
-              </div>
+<form
+action={FORMSPREE_URL} method="POST"
+  className="space-y-6"
+>
+  <div>
+    <label 
+      htmlFor="name" 
+      className="block text-[#2B2B2B] mb-2"
+      style={{ fontFamily: 'Inter, sans-serif' }}
+    >
+      Name
+    </label>
+    <input
+      type="text"
+      id="name"
+      name="name"
+      required
+      className="w-full px-4 py-3 rounded-lg border border-[#D9A441]/30 focus:outline-none focus:ring-2 focus:ring-[#8B1E1E] bg-white"
+      style={{ fontFamily: 'Inter, sans-serif' }}
+    />
+  </div>
 
-              <div>
-                <label 
-                  htmlFor="email" 
-                  className="block text-[#2B2B2B] mb-2"
-                  style={{ fontFamily: 'Inter, sans-serif' }}
-                >
-                  Email
-                </label>
-                <input
-                  type="email"
-                  id="email"
-                  name="email"
-                  value={formData.email}
-                  onChange={handleChange}
-                  required
-                  className="w-full px-4 py-3 rounded-lg border border-[#D9A441]/30 focus:outline-none focus:ring-2 focus:ring-[#8B1E1E] bg-white"
-                  style={{ fontFamily: 'Inter, sans-serif' }}
-                />
-              </div>
+  <div>
+    <label 
+      htmlFor="email" 
+      className="block text-[#2B2B2B] mb-2"
+      style={{ fontFamily: 'Inter, sans-serif' }}
+    >
+      Email
+    </label>
+    <input
+      type="email"
+      id="email"
+      name="email"
+      required
+      className="w-full px-4 py-3 rounded-lg border border-[#D9A441]/30 focus:outline-none focus:ring-2 focus:ring-[#8B1E1E] bg-white"
+      style={{ fontFamily: 'Inter, sans-serif' }}
+    />
+  </div>
 
-              <div>
-                <label 
-                  htmlFor="phone" 
-                  className="block text-[#2B2B2B] mb-2"
-                  style={{ fontFamily: 'Inter, sans-serif' }}
-                >
-                  Phone
-                </label>
-                <input
-                  type="tel"
-                  id="phone"
-                  name="phone"
-                  value={formData.phone}
-                  onChange={handleChange}
-                  className="w-full px-4 py-3 rounded-lg border border-[#D9A441]/30 focus:outline-none focus:ring-2 focus:ring-[#8B1E1E] bg-white"
-                  style={{ fontFamily: 'Inter, sans-serif' }}
-                />
-              </div>
+  <div>
+    <label 
+      htmlFor="phone" 
+      className="block text-[#2B2B2B] mb-2"
+      style={{ fontFamily: 'Inter, sans-serif' }}
+    >
+      Phone
+    </label>
+    <input
+      type="tel"
+      id="phone"
+      name="phone"
+      className="w-full px-4 py-3 rounded-lg border border-[#D9A441]/30 focus:outline-none focus:ring-2 focus:ring-[#8B1E1E] bg-white"
+      style={{ fontFamily: 'Inter, sans-serif' }}
+    />
+  </div>
 
-              <div>
-                <label 
-                  htmlFor="message" 
-                  className="block text-[#2B2B2B] mb-2"
-                  style={{ fontFamily: 'Inter, sans-serif' }}
-                >
-                  Message
-                </label>
-                <textarea
-                  id="message"
-                  name="message"
-                  value={formData.message}
-                  onChange={handleChange}
-                  required
-                  rows={5}
-                  className="w-full px-4 py-3 rounded-lg border border-[#D9A441]/30 focus:outline-none focus:ring-2 focus:ring-[#8B1E1E] bg-white resize-none"
-                  style={{ fontFamily: 'Inter, sans-serif' }}
-                />
-              </div>
+  <div>
+    <label 
+      htmlFor="message" 
+      className="block text-[#2B2B2B] mb-2"
+      style={{ fontFamily: 'Inter, sans-serif' }}
+    >
+      Message
+    </label>
+    <textarea
+      id="message"
+      name="message"
+      required
+      rows={5}
+      className="w-full px-4 py-3 rounded-lg border border-[#D9A441]/30 focus:outline-none focus:ring-2 focus:ring-[#8B1E1E] bg-white resize-none"
+      style={{ fontFamily: 'Inter, sans-serif' }}
+    />
+  </div>
 
-              <button
-                type="submit"
-                className="w-full bg-[#8B1E1E] text-white px-8 py-4 rounded-lg hover:bg-[#6B1616] transition-colors"
-                style={{ fontFamily: 'Inter, sans-serif' }}
-              >
-                Send Message
-              </button>
-            </form>
-          </div>
+  <button
+    type="submit"
+    className="w-full bg-[#8B1E1E] text-white px-8 py-4 rounded-lg hover:bg-[#6B1616] transition-colors"
+    style={{ fontFamily: 'Inter, sans-serif' }}
+  >
+    Send Message
+  </button>
+</form>          </div>
 
           {/* Contact Information */}
           <div className="space-y-8">
