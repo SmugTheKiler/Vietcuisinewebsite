@@ -64,30 +64,32 @@ export function Navigation() {
       </div>
 
       {/* Mobile Menu */}
-      {mobileMenuOpen && (
-        <div className="lg:hidden bg-[#FFF8F1] border-t border-[#D9A441]/20">
-          <div className="px-4 pt-2 pb-4 space-y-3">
-            <button onClick={() => scrollToSection('hero')} className="block w-full text-left py-2 text-[#2B2B2B] hover:text-[#8B1E1E] transition-colors" style={{ fontFamily: 'Inter, sans-serif' }}>
-              Home
-            </button>
-            <button onClick={() => scrollToSection('menu')} className="block w-full text-left py-2 text-[#2B2B2B] hover:text-[#8B1E1E] transition-colors" style={{ fontFamily: 'Inter, sans-serif' }}>
-              Menu
-            </button>
-            <button onClick={() => scrollToSection('locations')} className="block w-full text-left py-2 text-[#2B2B2B] hover:text-[#8B1E1E] transition-colors" style={{ fontFamily: 'Inter, sans-serif' }}>
-              Locations
-            </button>
-            <button onClick={() => scrollToSection('about')} className="block w-full text-left py-2 text-[#2B2B2B] hover:text-[#8B1E1E] transition-colors" style={{ fontFamily: 'Inter, sans-serif' }}>
-              About
-            </button>
-            <button onClick={() => scrollToSection('contact')} className="block w-full text-left py-2 text-[#2B2B2B] hover:text-[#8B1E1E] transition-colors" style={{ fontFamily: 'Inter, sans-serif' }}>
-              Contact
-            </button>
-            <button onClick={() => scrollToSection('locations')} className="w-full bg-[#8B1E1E] text-white px-6 py-3 rounded-lg hover:bg-[#6B1616] transition-colors" style={{ fontFamily: 'Inter, sans-serif' }}>
-              Book  a Table
-            </button>
-          </div>
+      <div
+        className={`lg:hidden bg-[#FFF8F1] border-t border-[#D9A441]/20 overflow-hidden transition-all duration-300 ease-in-out ${
+          mobileMenuOpen ? "max-h-96 opacity-100" : "max-h-0 opacity-0"
+        }`}
+      >
+        <div className="px-4 pt-2 pb-4 space-y-3">
+          <button onClick={() => scrollToSection('hero')} className="block w-full text-left py-2 text-[#2B2B2B] hover:text-[#8B1E1E] transition-colors" style={{ fontFamily: 'Inter, sans-serif' }}>
+            Home
+          </button>
+          <button onClick={() => scrollToSection('menu')} className="block w-full text-left py-2 text-[#2B2B2B] hover:text-[#8B1E1E] transition-colors" style={{ fontFamily: 'Inter, sans-serif' }}>
+            Menu
+          </button>
+          <button onClick={() => scrollToSection('locations')} className="block w-full text-left py-2 text-[#2B2B2B] hover:text-[#8B1E1E] transition-colors" style={{ fontFamily: 'Inter, sans-serif' }}>
+            Locations
+          </button>
+          <button onClick={() => scrollToSection('about')} className="block w-full text-left py-2 text-[#2B2B2B] hover:text-[#8B1E1E] transition-colors" style={{ fontFamily: 'Inter, sans-serif' }}>
+            About
+          </button>
+          <button onClick={() => scrollToSection('contact')} className="block w-full text-left py-2 text-[#2B2B2B] hover:text-[#8B1E1E] transition-colors" style={{ fontFamily: 'Inter, sans-serif' }}>
+            Contact
+          </button>
+          <button onClick={() => scrollToSection('locations')} className="w-full bg-[#8B1E1E] text-white px-6 py-3 rounded-lg hover:bg-[#6B1616] transition-colors" style={{ fontFamily: 'Inter, sans-serif' }}>
+            Book a Table
+          </button>
         </div>
-      )}
+      </div>
     </nav>
   );
 }
